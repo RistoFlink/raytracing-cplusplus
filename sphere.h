@@ -1,8 +1,9 @@
 #ifndef SPHERE_H
 #define SPHERE_H
 
+#include "rtweekend.h"
+
 #include "hittable.h"
-#include "vec3.h"
 
 class sphere : public hittable {
     public:
@@ -11,7 +12,7 @@ class sphere : public hittable {
         bool hit (const ray& r, double rayt_min, double rayt_max, hit_record& rec) const override {
             vec3 oc = center - r.origin();
             auto a = r.direction().length_squared();
-            auto h = dot(r.direction(), oc);            auto c = oc.length_squared() - radius*radius;
+            auto h = dot(r.direction(), oc);
             auto c = oc.length_squared() - radius*radius;
 
             auto discriminant = h*h - a*c;
