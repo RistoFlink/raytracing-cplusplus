@@ -43,3 +43,5 @@
 # image files
 *.ppm
 raytrace
+
+.DS_Store
