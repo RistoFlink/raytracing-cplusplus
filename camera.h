@@ -9,7 +9,7 @@
 
 class camera {
 public:
-  double ascpect_ratio = 1.0;
+  double aspect_ratio = 1.0;
   int image_width = 100;
   int samples_per_pixel = 10;
   int max_depth = 10;
@@ -56,7 +56,7 @@ private:
 
   void initialize() {
     // Calculate image height and ensure it's at least 1
-    image_height = int(image_width / ascpect_ratio);
+    image_height = int(image_width / aspect_ratio);
     image_height = (image_height < 1) ? 1 : image_height;
 
     pixel_samples_scale = 1.0 / samples_per_pixel;
